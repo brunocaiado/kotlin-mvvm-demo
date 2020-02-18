@@ -1,0 +1,29 @@
+import pt.bcaiado.mvvm.demo.Dependencies
+
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../android-configs.gradle'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation Dependencies.KOTLIN
+
+    implementation Dependencies.APPCOMPAT
+    implementation Dependencies.CORE_KTX
+
+    implementation Dependencies.DAGGER
+    kapt Dependencies.DAGGER_COMPILER
+
+    implementation Dependencies.RETROFIT
+    implementation Dependencies.RETROFIT_CONVERTER
+    implementation Dependencies.LOGGING
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

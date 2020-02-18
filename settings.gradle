@@ -1,0 +1,6 @@
+rootProject.name='nextgen-kotlin'
+include ':app'
+include ':core'
+include ':features:welcome'
+include ':libraries:datarepository'
+include ':libraries:datasource'

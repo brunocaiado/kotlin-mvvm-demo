@@ -1,0 +1,33 @@
+import pt.bcaiado.mvvm.demo.Dependencies
+
+apply plugin: 'com.android.dynamic-feature'
+
+apply from: '../../flavors.gradle'
+apply from: '../../android-dynamic-module.gradle'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':app')
+    implementation project(':core')
+
+    implementation project(':libraries:datarepository')
+
+    implementation Dependencies.KOTLIN
+    implementation Dependencies.CONSTRAINT_LAYOUT
+
+    implementation Dependencies.DAGGER
+    kapt Dependencies.DAGGER_COMPILER
+    implementation Dependencies.DAGGER_SUPPORT
+    kapt Dependencies.DAGGER_PROCESSOR
+
+    implementation Dependencies.RETROFIT
+    implementation Dependencies.RETROFIT_CONVERTER
+
+    implementation Dependencies.LIFECYCLE_EXTENSIONS
+    implementation Dependencies.LIFECYCLE_VIEWMODEL
+}

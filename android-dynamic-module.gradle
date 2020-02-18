@@ -1,0 +1,23 @@
+import pt.bcaiado.mvvm.demo.AndroidConfigVersions
+
+
+android {
+
+    compileSdkVersion AndroidConfigVersions.ANDROID_COMPILE_SDK_VERSION
+
+    defaultConfig {
+
+        minSdkVersion AndroidConfigVersions.ANDROID_MIN_SDK_VERSION
+        targetSdkVersion AndroidConfigVersions.ANDROID_TARGET_SDK_VERSION
+
+    }
+
+    buildTypes {
+        release {
+            proguardFiles 'proguard-rules-dynamic-features.pro'
+        }
+    }
+
+    dataBinding.enabled = true
+
+}
