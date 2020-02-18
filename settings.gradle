@@ -1,4 +1,4 @@
-rootProject.name='nextgen-kotlin'
+rootProject.name='kotlin-mvvm-demo'
 include ':app'
 include ':core'
 include ':features:welcome'
